@@ -24,3 +24,5 @@ L'année à Epitech m'avait vraiment formé, j'étais vraiment bon en C et tous 
 J'ai souvent pensé à créer de petits blocs-notes pour répertorier tous les petits tips j'apprends. J'ai jamais eu vraiment le courage de créer des simples fichiers textes. J'ai pensé à créer un site qui répertorie des conseils par catégories/thèmes mais l'envie n'était pas vraiment là. J'ai récemment découvert Gatsby, que j'ai utilisé pour refaire mon portfolio. L'outil me paraissait trop adapté pour ne pas le faire. Voici le Manealog!
 
 ## Quoi ?
+
+Finalement, dans ce blog je compte poster mes différentes découvertes dans les technologies du web, quelques conseils sur les technologies que j'utilise, ou encore des présentations de mon environnement de développement. Enfin bref, tout ce que je penses pouvoir être utile à quelqu'un et/ou que j'aurai envie de noter dans un mémo :)
