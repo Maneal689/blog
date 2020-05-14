@@ -56,7 +56,8 @@ const Header = () => {
               <Link
                 to="/search"
                 className={
-                  window && window.location.pathname === "/search" ? "active" : ""
+                  typeof window !== "undefined" &&
+                  (window.location.pathname === "/search" ? "active" : "")
                 }
               >
                 Recherche avancée
