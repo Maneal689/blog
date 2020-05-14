@@ -1,0 +1,19 @@
+backend:
+  name: github
+  branch: master
+  repo: Maneal689/blog
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "projects"
+    label: "Projets"
+    folder: "content/projects"
+    create: true
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Hero", name: "hero", widget: "image" }
+      - { label: "Description", name: "desc", widget: "string"  }
+      - { label: "Date de publication", name: "date", widget: "datetime" }
+      - { label: "Article", name: "body", widget: "markdown" }
