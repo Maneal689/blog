@@ -1,0 +1,139 @@
+@import "colors";
+
+body {
+  font-size: calc(0.9em + 0.5vmin);
+  background-color: $white;
+  margin: 0;
+  padding: 0;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.hero {
+  position: relative;
+  .presentation {
+    position: absolute;
+    max-width: 960px;
+    margin: 0 auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+    small {
+      color: $gray;
+    }
+  }
+}
+
+.tag-list {
+  margin-top: 1em;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  li {
+    font-size: 0.8em;
+    padding: 0.2em 0.5em;
+    background-color: $primary;
+    border-radius: 3em;
+    &:not(:last-child) {
+      margin-right: 1em;
+    }
+    * {
+      color: $white !important;
+    }
+  }
+}
+
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2em 1em;
+  .post-list {
+    list-style-type: none;
+    & > li > a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      border-bottom: 1px solid black;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      color: black;
+      text-decoration: none;
+      transition: all ease 0.3s;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+      .post-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1em;
+        .post-header {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .post-excerpt {
+          text-align: justify;
+          font-size: 0.9em;
+        }
+      }
+    }
+    .tag-list {
+      justify-content: flex-end;
+    }
+  }
+  &.blog {
+    text-align: justify;
+    h1 {
+      text-align: center;
+    }
+    em {
+      color: $primary;
+    }
+    p {
+      margin: 1em auto;
+    }
+  }
+}
+
+.text-muted {
+  font-size: 0.8em;
+  color: $gray1;
+}
+
+@media (min-width: 992px) {
+  .content .post-list > li > a {
+    flex-direction: row;
+    align-items: normal;
+    .post-info {
+      min-height: 100%;
+      .post-header {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .tag-list {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
