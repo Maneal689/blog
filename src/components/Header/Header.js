@@ -56,7 +56,7 @@ const Header = () => {
               <Link
                 to="/search"
                 className={
-                  window.location.pathname === "/search" ? "active" : ""
+                  window && window.location.pathname === "/search" ? "active" : ""
                 }
               >
                 Recherche avancée
