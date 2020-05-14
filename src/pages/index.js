@@ -56,7 +56,7 @@ const IndexPage = ({ data }) => {
                   <ul className="tag-list">
                     {post.frontmatter.tags.map(({ tag }, index) => (
                       <li key={`${post.frontmatter.title}-tag-${index}`}>
-                        <small>{tag}</small>
+                        <small>#{tag}</small>
                       </li>
                     ))}
                   </ul>
