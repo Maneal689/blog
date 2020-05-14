@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
       <Header />
       <div className="hero">
         <Img
-          style={{ width: "100%", maxHeight: 350 }}
+          style={{ width: "100%", height: 350 }}
           imgStyle={{ objectFit: "cover", filter: "brightness(0.5)" }}
           fluid={data.file.childImageSharp.fluid}
           alt="Blog hero"
@@ -79,7 +79,7 @@ export const query = graphql`
         }
       }
     }
-    allMarkdownRemark {
+    allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}) {
       nodes {
         excerpt
         fields {
