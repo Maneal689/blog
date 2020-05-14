@@ -10,8 +10,6 @@ desc: Je suis étudiant en L3 Informatique, j'ai d'abord appris à développer e
   choix. J'ai décidé d'ouvrir ce blog pour partager mes conseils/découvertes
   concernant le développement, les technologies que j'utilise.
 ---
-# Présentation
-
 Je m'appelle Geoffrey Douilly (alias *Maneal*), actuellement en fin de L3 Informatique, je me suis lancé récemment en tant que développeur web freelance.
 
 ## Mon parcours
