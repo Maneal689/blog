@@ -15,7 +15,7 @@ J'ai passé beaucoup de temps à essayer différentes distributions *Linux*, mai
 
 Cela fait 3 ans que je n'ai pas changé/réinstallé de distribution, même si avant cela je changeais régulièrement, et suis passé par les plus connues d'entre elles: Manjaro, Ubuntu, Kubuntu, Antergos, Debian, Fedora, Deepin...
 
-Après avoir été lassé de changer sans arrêt, du fait que je n'arrivais pas à trouver une distribution qui soit *légère*, *ultra personnalisable*, qui possède un gestionnaire de paquets *rapide* et "bien fourni", sans avoir sans arrêt à rajouter des sources externes. Et surtout, une distribution en *rolling release* qui ne m'oblige pas à réinstaller le système à chaque nouvelles versions.
+J'ai vite été lassé de ne pas réussir à trouver une distribution qui soit *légère*, *ultra personnalisable*, qui possède un gestionnaire de paquets *rapide* et "bien fourni" (sans avoir sans arrêt à rajouter des sources externes), et surtout, une distribution en *rolling release* qui ne m'oblige pas à réinstaller le système à chaque nouvelles versions.
 
 Il ne restait plus trop de choix, pour pouvoir choisir tout ce qui composerait mon nouvel environnement, avoir un OS en rolling release, et un gestionnaire de paquet bien fourni, le meilleur candidat était *Arch-linux* qui me rebutait pourtant tellement dû aux mauvaises rumeurs sur son instabilité, et la complexité de son installation.\
 Mais pourtant, voilà, il répondait à tous mes critères alors pourquoi pas le tester ?
