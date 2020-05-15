@@ -4,6 +4,7 @@ module.exports = {
     description:
       "Je m'appelle Geoffrey Douilly, je suis développeur web fullstack, voici le blog sur lequel je posterai mes découvertes en développement/technologies",
     author: "Geoffrey Douilly",
+    siteUrl: "https://www.blog.geoffreydouilly.fr",
   },
   plugins: [
     {
@@ -34,6 +35,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    "gatsby-plugin-sitemap",
     "gatsby-transformer-yaml",
     "gatsby-plugin-netlify-cms",
     "gatsby-plugin-sass",
@@ -55,6 +63,22 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "Manealog",
+        short_name: "ML",
+        start_url: "/",
+        background_color: "#DEDEDE",
+        theme_color: "#663399",
+        display: "standalone",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-offline",
+      options: {
+        precachePages: ["/search", "/blog/*"],
+      },
+    },
   ],
 };
