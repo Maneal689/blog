@@ -26,4 +26,4 @@ J'ai souvent pensé à créer de petits blocs-notes pour répertorier tous les p
 
 ## Quoi ?
 
-Finalement, dans ce blog je compte poster mes différentes découvertes dans les technologies du web, quelques conseils sur les technologies que j'utilise, ou encore des présentations de mon environnement de développement. Enfin bref, tout ce que je penses pouvoir être utile à quelqu'un et/ou que j'aurai envie de noter dans un mémo :)
+Finalement, dans ce blog je compte poster mes différentes découvertes dans les technologies du web, quelques conseils sur les technologies que j'utilise, ou encore des présentations de mon environnement de développement. Enfin bref, tout ce que je pense pouvoir être utile à quelqu'un et/ou que j'aurais envie de noter dans un mémo :)
