@@ -5,10 +5,11 @@ import Img from "gatsby-image";
 
 import SEO from "../components/seo";
 import Header from "../components/Header/Header";
+import PostList from "../components/PostList";
 
 import "../styles/style.scss";
 const IndexPage = ({ data }) => {
-  const posts = useMemo(() => data.allMarkdownRemark.nodes, []);
+  const posts = useMemo(() => data.allMarkdownRemark.nodes, [data]);
   return (
     <div>
       <SEO title="Home" />
@@ -27,44 +28,7 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
       <div className="content">
-        <ul className="post-list">
-          {posts.map((post, i) => (
-            <li key={`post-${i}`}>
-              <a
-                href={post.fields.slug}
-                title={`Voir le post "${post.frontmatter.title}"`}
-              >
-                <Img
-                  style={{
-                    flexBasis: 200,
-                    flexGrow: 0,
-                    flexShrink: 0,
-                  }}
-                  fixed={post.frontmatter.hero.childImageSharp.fixed}
-                  alt={`${post.frontmatter.title} hero`}
-                />
-                <div className="post-info">
-                  <div>
-                    <div className="post-header">
-                      <h2>{post.frontmatter.title}</h2>
-                      <small className="text-muted">
-                        Publié le {post.frontmatter.date}
-                      </small>
-                    </div>
-                    <div className="post-excerpt">{post.excerpt}</div>
-                  </div>
-                  <ul className="tag-list">
-                    {post.frontmatter.tags.map(({ tag }, index) => (
-                      <li key={`${post.frontmatter.title}-tag-${index}`}>
-                        <small>#{tag}</small>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </a>
-            </li>
-          ))}
-        </ul>
+        <PostList posts={posts} />
       </div>
     </div>
   );
@@ -79,7 +43,7 @@ export const query = graphql`
         }
       }
     }
-    allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}) {
+    allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
       nodes {
         excerpt
         fields {
