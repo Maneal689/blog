@@ -1,7 +1,7 @@
 ---
 title: Mon environnement (os/wm)
 hero: /img/arch_linux_light.png
-date: 2020-05-14T23:18:21.863Z
+date: 2020-05-15T23:51:09.258Z
 tags:
   - tag: environnement
   - tag: wm
