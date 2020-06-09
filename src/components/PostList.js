@@ -18,6 +18,7 @@ function PostList({ posts }) {
                   flexGrow: 0,
                   flexShrink: 0,
                 }}
+                imgStyle={{ objectFit: "contain" }}
                 fixed={post.frontmatter.hero.childImageSharp.fixed}
                 alt={`${post.frontmatter.title} hero`}
               />

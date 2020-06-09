@@ -9,7 +9,7 @@ import PostList from "../components/PostList";
 
 import "../styles/style.scss";
 const IndexPage = ({ data }) => {
-  const posts = useMemo(() => data.allMarkdownRemark.nodes, [data]);
+  const posts = useMemo(() => data ? data.allMarkdownRemark.nodes : [], [data]);
   return (
     <div>
       <SEO title="Home" />
@@ -54,7 +54,7 @@ export const query = graphql`
           title
           hero {
             childImageSharp {
-              fixed(width: 200, height: 200) {
+              fixed(width: 200, height: 200, fit: COVER, quality: 100) {
                 ...GatsbyImageSharpFixed
               }
             }

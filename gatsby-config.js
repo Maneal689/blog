@@ -10,8 +10,15 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
+        name: "static_images",
         path: `${__dirname}/static/img`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: `${__dirname}/src/images`,
       },
     },
     {
@@ -21,15 +28,25 @@ module.exports = {
         path: `${__dirname}/content/blog`,
       },
     },
+    "gatsby-image",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
-          "gatsby-remark-relative-images",
+          {
+            resolve: "gatsby-plugin-netlify-cms-paths",
+            options: {
+              // Path to your Netlify CMS config file
+              cmsConfig: "/static/admin/config.yml",
+            },
+          },
+          // "gatsby-remark-relative-images",
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 590,
+              maxWidth: 800,
             },
           },
         ],
@@ -42,13 +59,9 @@ module.exports = {
       },
     },
     "gatsby-plugin-sitemap",
-    "gatsby-transformer-yaml",
     "gatsby-plugin-netlify-cms",
     "gatsby-plugin-sass",
-    "gatsby-image",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -65,9 +78,9 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     {
       resolve: "gatsby-plugin-offline",
-      options: {
-        precachePages: ["/search", "/blog/*"],
-      },
+      // options: {
+      //   precachePages: ["/search", "/blog/*"],
+      // },
     },
   ],
 };
