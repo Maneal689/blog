@@ -8,13 +8,13 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 set shortmess=aoO
 badd +21 gatsby-config.js
-badd +57 src/pages/index.js
+badd +8 src/pages/index.js
 badd +21 src/components/PostList.js
-badd +18 static/admin/config.yml
+badd +10 static/admin/config.yml
+badd +9 src/templates/blog-post.js
 argglobal
 %argdel
 $argadd gatsby-config.js
-edit static/admin/config.yml
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -23,21 +23,6 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-argglobal
-setlocal fdm=syntax
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 10 - ((9 * winheight(0) + 23) / 46)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-10
-normal! 0
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

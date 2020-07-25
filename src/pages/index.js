@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => {
       <Header />
       <div className="hero">
         <Img
-          style={{ width: "100%", height: 350 }}
+          style={{ width: "100%", height: 512 }}
           imgStyle={{ objectFit: "cover", filter: "brightness(0.5)" }}
           fluid={data.file.childImageSharp.fluid}
           alt="Blog hero"

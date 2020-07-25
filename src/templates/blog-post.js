@@ -16,7 +16,7 @@ function BlogPost({ data }) {
       <Header />
       <div className="hero">
         <Img
-          style={{ width: "100%", maxHeight: 550 }}
+          style={{ width: "100%", maxHeight: 1024 }}
           imgStyle={{ objectFit: "cover", filter: "brightness(0.3)" }}
           fluid={data.frontmatter.hero.childImageSharp.fluid}
           alt={`${data.frontmatter.title} hero`}
