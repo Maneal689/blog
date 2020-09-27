@@ -31,6 +31,8 @@
         width: 100%;
         padding: 0.5em 10%;
         text-align: center;
+        display: flex;
+        align-items: center;
         a {
           color: $gray;
           text-decoration: none;

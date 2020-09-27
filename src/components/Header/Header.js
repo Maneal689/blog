@@ -5,6 +5,8 @@ import Hamburger from "../Hamburger/Hamburger";
 
 import "./Header.scss";
 
+import logo from "../../images/geo logo.png";
+
 const Header = () => {
   const [navActive, setNavActive] = useState(false);
   const [search, setSearch] = useState("");
@@ -30,9 +32,10 @@ const Header = () => {
             style={{
               color: "white",
               textDecoration: "none",
+              overflow: "hidden"
             }}
           >
-            {data.site.siteMetadata.title}
+            <img src={logo} alt="logo" style={{maxWidth: "150px"}}/>
           </Link>
         </h1>
         <nav className={`nav ${navActive ? "active" : ""}`}>
