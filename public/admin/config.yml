@@ -1,0 +1,27 @@
+backend:
+  name: github
+  branch: vnext
+  repo: Maneal689/blog
+  open_authoring: true
+
+media_folder: public/img
+public_folder: /img
+publish_mode: editorial_workflow
+
+
+collections:
+  - name: "post"
+    label: "Post"
+    folder: "content/blog"
+    create: true
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Hero", name: "hero", widget: "image" }
+      - { label: "Date de publication", name: "date", widget: "datetime" }
+      - label: "Tags"
+        name: "tags"
+        widget: list
+        fields:
+          - { label: "Tag", name: "tag", widget: "string" }
+      - { label: "Description", name: "desc", widget: "string"  }
+      - { label: "Article", name: "body", widget: "markdown" }
