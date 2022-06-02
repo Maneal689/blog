@@ -22,9 +22,10 @@ const Home: NextPage<PropsType> = ({posts}) => {
         alt="Blog hero"
       />
       <div className="presentation">
-        Je suis étudiant en L3 Informatique, j'ai d'abord appris à développer en autodidacte et je continue encore à
-        m'auto-former sur les technologies de mon choix. J'ai décidé d'ouvrir ce blog pour partager mes
-        conseils/découvertes concernant le développement, les technologies que j'utilise.
+        Je suis développeur web fullstack, pour mon métier je continue à m&apos;auto-former sur les
+        nouvelles technologies.
+        J&apos;ai décidé d&apos;ouvrir ce blog pour partager mes conseils/découvertes concernant le développement et les
+        technologies que j&apos;utilise.
       </div>
     </div>
     <div className="content">

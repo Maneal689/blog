@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import PropTypes from "prop-types";
 import {PostType} from "../PostType";
 import {marked} from "marked";
 
@@ -11,18 +10,19 @@ const PostList: React.FC<{ posts: PostType[] }> = ({posts}) => {
   }, [])
 
   function getExcerpt(post: PostType) {
-    const textLength = 160;
+    const textLength = 960;
     if (typeof window === "undefined") return "";
+
     const parser = new DOMParser();
-    let projectDoc: Document;
-    projectDoc = parser.parseFromString(
+    let projectDoc: Document = parser.parseFromString(
       marked(post.content),
       "text/html",
     );
     // Get content in html document
 
     const text = projectDoc.body.innerText; // Get only text without HTML tags
-    return text.slice(0, textLength) + (text.length > textLength ? "..." : ""); // Get excerpt
+    return text.split(" ").slice(0, 30).join(" ") + "...";
+    // return text.slice(0, textLength) + (text.length > textLength ? "..." : ""); // Get excerpt
   }
 
   if (posts && posts.length > 0)
@@ -36,9 +36,9 @@ const PostList: React.FC<{ posts: PostType[] }> = ({posts}) => {
             >
               <img
                 style={{
-                  flexBasis: 200,
-                  flexGrow: 0,
-                  flexShrink: 0,
+                  width: 200,
+                  padding: "1em 0",
+                  objectPosition: "top center",
                   objectFit: "contain"
                 }}
                 src={post.data.hero}

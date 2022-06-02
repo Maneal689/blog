@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-  background: "rebeccapurple";
+  background: rebeccapurple;
 
   .header {
     margin: 0 auto;

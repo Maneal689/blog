@@ -32,19 +32,15 @@ const Header = () => {
         <nav className={`nav ${navActive ? "active" : ""}`}>
           <ul>
             <li>
-              <div className="input">
-                <input
-                  type="text"
-                  value={search}
-                  onChange={e => setSearch(e.target.value)}
-                  name="search-input"
-                />
-                <button
-                  onClick={() => router.push({pathname: "/search", query: {q: search}})}
-                >
+              <form className="input" onSubmit={(e) => {
+                e.preventDefault();
+                router.push({pathname: "/search", query: {q: search}})
+              }}>
+                <input type="text" value={search} onChange={e => setSearch(e.target.value)} name="search-input"/>
+                <button onClick={() => router.push({pathname: "/search", query: {q: search}})}>
                   <i className="fas fa-search"/>
                 </button>
-              </div>
+              </form>
             </li>
             <li>
               <Link

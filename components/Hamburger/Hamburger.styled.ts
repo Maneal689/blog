@@ -10,17 +10,16 @@ export const Container = styled.div`
   .hamburger {
     height: 2px;
     width: var(--burger-width);
-    margin: (var(--burger-space) + 2px) 0;
+    margin: calc(var(--burger-space) + 2px) 0;
     background-color: var(--white);
     position: relative;
     transition: all ease 0.3s;
     border-radius: 3px;
     z-index: 1000;
 
-    &::before {
+    &::before, &::after {
       content: "";
       position: absolute;
-      top: -var(--burger-space);
       height: 2px;
       width: var(--burger-width);
       background-color: var(--white);
@@ -28,15 +27,12 @@ export const Container = styled.div`
       border-radius: 3px;
     }
 
+    &::before {
+      top: calc(-1 * var(--burger-space));
+    }
+
     &::after {
-      content: "";
-      position: absolute;
       top: var(--burger-space);
-      height: 2px;
-      width: var(--burger-width);
-      background-color: var(--white);
-      transition: all ease 0.3s;
-      border-radius: 3px;
     }
 
     &.active {
@@ -54,7 +50,5 @@ export const Container = styled.div`
 }
 
 @media (min-width: 992px) {
-  .hamburger-container {
-    display: none !important;
-  }
+  display: none !important;
 `
