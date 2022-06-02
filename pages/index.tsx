@@ -12,7 +12,6 @@ type PropsType = {
 };
 
 const Home: NextPage<PropsType> = ({posts}) => {
-  console.log("posts: ", posts);
   return (<div>
     <Header/>
     <div className="hero">
