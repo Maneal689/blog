@@ -1,6 +1,6 @@
 backend:
   name: github
-  branch: vnext
+  branch: master
   repo: Maneal689/blog
   open_authoring: true
 
